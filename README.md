@@ -28,10 +28,17 @@ The data files are not included in this repository because OASIS has its own acc
 
 ## Run the dashboard
 
+The dashboard uses the included model bundle and does not need the original
+OASIS CSV files to run. In PowerShell, from the project folder, run:
+
 ```
-pip install -r requirements.txt
-streamlit run app.py
+.\.venv\Scripts\python.exe -m streamlit run app.py
 ```
+
+The project virtual environment should use Python 3.12. Streamlit Cloud should
+also be configured to use Python 3.12 and deploy `app.py` from the `main`
+branch. Prediction inputs are submitted together with **Update estimate** to
+avoid running the explanation for every slider movement.
 
 ## Notes
 
